@@ -1,0 +1,111 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+  }
+  
+  .navbar li {
+    margin: 0 15px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .navbar a:hover {
+    color: #f39c12;
+  }
+  
+  /* Main Content Layout with Flexbox */
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr; /* Three columns layout */
+    gap: 20px;
+    margin: 20px;
+  }
+  
+  /* Left, Main, and Right Sections */
+  .left, .right {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .main {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+  }
+  
+  /* Mobile View - Using Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    /* Mobile layout with Flexbox */
+    .content {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar li {
+      margin: 10px 0;
+    }
+  
+    .content .left,
+    .content .main,
+    .content .right {
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* For very small screens */
+    .navbar {
+      padding: 15px;
+    }
+  
+    .navbar a {
+      font-size: 16px;
+    }
+  
+    .content {
+      margin: 10px;
+    }
+  
+    footer {
+      font-size: 14px;
+    }
+  }
+  
